@@ -7,7 +7,7 @@ import time
 kinesis_client = kinesis.connect_to_region("us-east-1")
 print('Connected to {}'.format(kinesis_client))
 kinesis_stream = "traffic-message-stream"
-traffic_message_service_endpoint = "http://localhost:5000/traffic"
+traffic_message_service_endpoint = "http://localhost:8080/traffic"
 
 
 def get_traffic_messages(no_of_messages: int=10):
