@@ -31,7 +31,7 @@ def get_traffic_messages():
     random_location = request.args.get('randomlocation', 'false')
     select_random_location = True if random_location.capitalize() == 'True' else False
     start_timestamp = request.args.get('starttime', datetime.today().strftime(DATE_FORMAT))
-    stepsize_timestamp = int(request.args.get('stepsize', 1000))  # Timestamp step size in millisec
+    stepsize_timestamp = int(request.args.get('time_stepsize', 2300))  # Timestamp step size in millisec
     timestamp_delta = timedelta(milliseconds=stepsize_timestamp)
     roadnumber = request.args.get('roadnumber', None)
     if not select_random_location:
