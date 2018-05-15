@@ -14,7 +14,8 @@ VALIDFIRSTLETTERS = [i for i in ALPHABET if i not in INVALIDFIRSTLETTERS]
 LICENSEPLATE_TEMPLATES = ['XX-NNN-X', 'XX-NN-XX', 'NN-XXX-N', 'X-NNN-XX', 'XX-XX-NN', 'XX-XX-NN', 'NN-XX-XX', 'NN-NN-XX']
 LICENSEPLATE_TEMPLATES_FOREIGN_B = ['1-NNN-XXX']
 LICENSEPLATE_TEMPLATES_FOREIGN_D = ['K NN XXXXX', 'ST NNN XXX']
-STATIC_FILEFOLDER = os.path.join('app', 'static')
+LICENSEPLATE_TEMPLATES_FOREIGN_LT = ['NN-XXXXXX']
+STATIC_FILEFOLDER = os.path.join('traffic-message-service', 'app', 'static')
 CSV_DELIMITER = ';'
 CSV_QUOTECHAR = '"'
 
@@ -31,13 +32,16 @@ class LicenceplateGenerator(object):
 
         for i in range(count):
             # generate a foreign template 1 out of 10
-            dice10 = random.randint(1, 10)
-            if dice10 == 10:
+            dice = random.randint(1, 100)
+            if dice >= 94:
                 licenseplate_number = self.generate_licenseplate(LICENSEPLATE_TEMPLATES_FOREIGN_B)
                 licenseplate_country = 'B'
-            elif dice10 == 9:
+            elif dice >= 86:
                 licenseplate_number = self.generate_licenseplate(LICENSEPLATE_TEMPLATES_FOREIGN_D)
                 licenseplate_country = 'D'
+            elif dice >= 85:
+                licenseplate_number = self.generate_licenseplate(LICENSEPLATE_TEMPLATES_FOREIGN_LT)
+                licenseplate_country = 'LT'
             else:
                 licenseplate_number = self.generate_licenseplate(LICENSEPLATE_TEMPLATES)
                 licenseplate_country = 'NL'

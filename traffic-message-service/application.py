@@ -14,9 +14,9 @@ instructions = '''<img src="/static/traffic.jpg"/>
     (eg. &amp;roadnumber=A12).</p>\n
     <p>Add the request parameter <code>starttime=</code> to specify the timestamp to start at (format: 
     YYYY-MM-DDTHH:MM:SSZ).</p>\n
-    <p>Example: .../1.1/traffic?count=100 to generate 100 messages.</p>\n
-    <p>Example: .../1.1/traffic?count=100&amp;randomlocation=true to generate 100 messages with a random location.</p>
-    <p>Example: .../1.1/traffic?count=10&amp;stepsize=5000 to generate 100 messages with 5 seconds between each generated message timestamp.</p>\n
+    <p>Example: .../traffic?count=100 to generate 100 messages.</p>\n
+    <p>Example: .../traffic?count=100&amp;randomlocation=true to generate 100 messages with a random location.</p>
+    <p>Example: .../traffic?count=10&amp;stepsize=5000 to generate 100 messages with 5 seconds between each generated message timestamp.</p>\n
     '''
 footer_text = '</body>\n</html>'
 

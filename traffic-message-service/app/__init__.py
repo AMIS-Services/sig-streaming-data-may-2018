@@ -7,4 +7,4 @@ application = app = Flask(__name__, static_url_path='/static')
 # API Version
 api_version = '1.1'
 
-app.register_blueprint(traffic, url_prefix='/{}/traffic'.format(api_version))
+app.register_blueprint(traffic, url_prefix='/traffic')
