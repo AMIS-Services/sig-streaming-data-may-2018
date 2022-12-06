@@ -23,10 +23,8 @@ It is recommended to create a Python virtual environment (virtualenv) when runni
 When you are not yet familiar with this follow these instructions (for Windows 10) or check the workshop document at page 21.
 - First install Python
 - Open a command prompt or Powershell window
-- Create a subfolder .virtualenvs in your home directory (c:\Users\<username>)
-- Navigate to this folder (`cd ~\.virtualenvs`)
-- Create a new virtualenv: `virtualenv kinesis-workshop`. Note: if you have multiple version of Python running on your machine, type: `virtualenv --python=<path to Python 3.6 python.exe> kinesis-workshop`, e.g. `virtualenv --python="C:\Program Files\Python36\python.exe" kinesis-workshop`
-- To activate the virtualenv on the command prompt, type: `~\.virtualenvs\kinesis-workshop\scripts\activate` or in Powershell add the extension .ps1: `~\.virtualenvs\kinesis-workshop\scripts\activate.ps1`
+- Create a new virtualenv: `python3 -m venv .venv`. Note: if you have multiple version of Python running on your machine, type: `python3 -m venv  --python=<path to Python 3 python.exe> .venv`
+- To activate the virtualenv on the command prompt, type: `~\.venv\scripts\activate` or in Powershell add the extension .ps1: `~\.venv\scripts\activate.ps1` or on Linux/Mac: `source .venv/bin/activate`
 - Type `deactivate` to exit the virtualenv.
 - By deleting the created folder, the virtualenv is also removed
 
